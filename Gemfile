@@ -10,6 +10,7 @@ gem 'paperclip', '2.4.0'
 gem "ckeditor", "~> 3.6.0"
 gem "yaml_db"
 
+
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
