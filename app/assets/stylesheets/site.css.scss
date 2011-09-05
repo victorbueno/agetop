@@ -1,0 +1,92 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #F2F2F2;
+	color: #333333;
+}
+
+#content {
+	background: #FFFFFF url('/assets/fundo_conteudo.png') repeat-x;
+}
+
+#content_container {
+	background: url('/assets/separador.png') repeat-x;
+	border-top: 1px solid #FFF;
+}
+
+#header_container {
+	#header {
+		background: #FFFFFF;
+		height: 181px;
+		position: relative;
+		margin: -181px auto;
+		line-height: 181px;
+		
+		.topo_direita {
+			text-align: right;
+		}
+	}
+	
+	.topo_azul {
+		background: url('/assets/topo_azul.png') repeat-x;
+		height: 146px;
+	}
+	
+	.topo_amarelo {
+		background: url('/assets/topo_amarelo.png') repeat-x;
+		height: 33px;
+		border-top: 1px solid #FFF;
+	}
+}
+
+#menu_container {
+	background: url('/assets/fundo_menu.png') repeat-x;
+	height: 46px;
+	border-top: 1px solid #FFF;
+	
+	#menu {
+		line-height: 46px;
+		font-size: 15px;
+		
+		.nav {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.nav li {
+			margin: 0;
+			padding: 0;
+			display: inline;
+			padding-left: 3px;
+			padding-right: 10px;
+			background: url('/assets/separador_vertical.png') no-repeat right;
+		}
+		
+		.nav li.last {
+			background: none;
+		}
+		
+		.nav li.first {
+			padding-left: 0px;
+		}
+		
+		.nav li a {
+			color: #666666;
+		}
+		
+		.nav li a:hover {
+			color: #106eb3;
+		}
+	}
+	
+	
+}
+
+
+
