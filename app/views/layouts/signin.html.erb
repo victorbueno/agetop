@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Agetop</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="header_container">
+	<div class="topo_azul"></div>
+	<div class="topo_amarelo"></div>
+	<div id="header" class="container_12">
+		<div class="grid_6">
+			<%= image_tag("logo_agetop.png") -%>
+		</div>
+		<div class="grid_6 topo_direita">
+			<%= image_tag("logo_estado.png") -%>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="menu_container">
+	<div id="menu" class="container_12">
+		<div class="grid_12">
+		</div>
+	</div>
+</div>
+
+<div id="content_container">
+	<div id="content" class="container_12">
+		<div class="grid_12">
+			<%= yield %>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
