@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  equipment_id: 1
+  pdf_file_name: MyString
+  pdf_content_type: MyString
+  pdf_file_size: 1
+  pdf_updated_at: 2011-09-13 23:15:45
+
+two:
+  equipment_id: 1
+  pdf_file_name: MyString
+  pdf_content_type: MyString
+  pdf_file_size: 1
+  pdf_updated_at: 2011-09-13 23:15:45

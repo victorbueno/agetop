@@ -2,12 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+html {
+	overflow-y: scroll;
+}
+
 html, body {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	background: #F2F2F2;
-	color: #333333;
+	color: #666666;
+}
+
+.inner {
+	padding: 10px;
 }
 
 #content {
@@ -22,10 +30,10 @@ html, body {
 #header_container {
 	#header {
 		background: #FFFFFF;
-		height: 181px;
+		height: 121px;
 		position: relative;
-		margin: -181px auto;
-		line-height: 181px;
+		margin: -121px auto;
+		line-height: 121px;
 		
 		.topo_direita {
 			text-align: right;
@@ -33,8 +41,8 @@ html, body {
 	}
 	
 	.topo_azul {
-		background: url('/assets/topo_azul.png') repeat-x;
-		height: 146px;
+		background: url('/assets/topo_azul_menor.png') repeat-x;
+		height: 80px;
 	}
 	
 	.topo_amarelo {
@@ -84,9 +92,28 @@ html, body {
 			color: #106eb3;
 		}
 	}
-	
-	
 }
 
+.listas {
+	width: 100%;
+	border: none;
+	
+	th, td {
+		padding: 4px;
+		vertical-align: middle;
+	}
+	
+	th {
+		background: #f2f2f2;
+	}
+	
+	td {
+		border-bottom: 1px dotted #f2f2f2;
+	}
+	
+	.center {
+		text-align: center;
+	}
+}
 
 

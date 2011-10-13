@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<%= wicked_pdf_stylesheet_link_tag "pdf.css" -%>
+
+	<title>print_defesa_previa</title>
+	
+</head>
+
+<body>
+	<%#= wicked_pdf_image_tag image_path("logo_agetop.png") %>
+	
+	<div class="inner">
+	
+	<table class="table">
+		<tr>
+			<td><%= wicked_pdf_image_tag(image_path("logo_agetop.png"), :width => 150) %></td>
+			<td class="center">
+				<%= wicked_pdf_image_tag(image_path("logo_estado.png"), :width => 75) %><br/>
+				SECRETARIA DE INFRA-ESTRUTURA<br/>
+				AGÊNCIA GOIANA DE TRANSPORTES E OBRAS - AGETOP<br/>
+				COMISSÃO DE DEFESA PRÉVIA - CODEP<br/>
+				Rua 17 nº 188 Casa-04 Setor Aeroviário - Fone: (62) 3201-4772/3201-4773 - CEP: 74435-250 - Goiânia - Goiás<br/>
+			</td>
+		</tr>
+	</table>
+	
+	<p class="center">
+		<strong>DEFESA PRÉVIA</strong>
+	</p>
+	
+	<p class="justify">
+		Ilmo. Sr.<br/>
+		Presidente da AGETOP - Comissão de Defesa Prévia - CODEP<br/>
+		NESTA<br/><br/>
+		Nome: <u><%= @defesa.nome %></u>. <u><%= @defesa.proprietario_condutor %></u> do veículo de PLACA: <u><%= @defesa.placa %></u>, COR: <u><%= @defesa.cor %></u>, 
+		MARCA/MODELO: <u><%= @defesa.marca_modelo %></u>, ANO: <u><%= @defesa.ano %></u>.
+	</p>
+	
+	<p class="justify">
+		<strong>DADOS DA POSSÍVEL INFRAÇÃO:</strong><br/><br/>
+		Auto de infração nº: <u><%= @defesa.numero_auto %></u>, data: <u><%= @defesa.data_auto %></u>, artigo: <u><%= @defesa.artigo_auto %></u>,
+		rodovia: <u><%= @defesa.rodovia_auto %></u>, KM: <u><%= @defesa.km_auto %></u>, horário: <u><%= @defesa.horario_auto %></u>, município: <u><%= @defesa.municipio_auto %></u>,
+		residente: <u><%= @defesa.residente %></u>, bairro: <u><%= @defesa.bairro %></u>, cidade: <u><%= @defesa.cidade %></u>, CEP: <u><%= @defesa.cep %></u>, fone: <u><%= @defesa.fone %></u>,
+		C.I.: <u><%= @defesa.identidade %></u>, UF: <u><%= @defesa.uf %></u>, CNH: <u><%= @defesa.cnh %></u>, UF: <u><%= @defesa.uf_cnh %></u>, CPF: <u><%= @defesa.cpf %></u>,
+		vem respeitosamente à presença de Vossa Senhoria, em prazo hábil, apresentar sua <strong>DEFESA PRÉVIA</strong> e solicitar o reestudo
+		da NOTIFICAÇÃO DE AUTUAÇÃO em anexo, requerendo o seu <strong>cancelamento</strong> pelas razões a seguir: 
+		<em class="mao"><%= @defesa.razoes %></em>
+	</p>
+	
+	<p class="center">
+		Nestes termos,<br/>
+		Pede e espera provimento.<br/>
+		Goiânia - GO, <%= data_formatada(Time.now) %>.<br/><br/>
+		<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</u><br/>
+		Assinatura do requerente
+	</p>
+	
+	<div class="border small">
+	<div class="inner">
+	<p>
+		<u>Anexar documentos (Fotocópias) de:</u>
+		<ul>
+			<li>C.I.(Carteira de Identidade) e CPF (Cadastro de Pessoa Física),</li>
+			<li>Pessoa Jurídica: Contrato social ou estatuto e CNPJ,</li>
+			<li>CRLV (Certificado de Registro e Licenciatura de Veículo),</li>
+			<li>Notificação de Autuação</li>
+			<li>CNH (Carteira Nacional de Habilitação)</li>
+			<li>Comprovante de endereço (água, luz, telefone ou fatura de cartão).</li>
+		</ul>
+			OBS.: A não apresentação de quaisquer documentos solicitados neste requerimento implicará no indeferimento sumário da presente Defesa Prévia.
+	</p>
+	</div>
+	</div>
+	
+	</div>
+	
+</body>
+</html>

@@ -9,7 +9,8 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'paperclip', '2.4.0'
 gem "ckeditor", "~> 3.6.0"
 gem "yaml_db"
-
+gem "kaminari"
+gem 'wicked_pdf'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"

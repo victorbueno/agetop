@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def show
-    @menu = Block.where(:name => "Menu").first.links.all
+    @page = Page.find(params[:id])
   end
 
 end

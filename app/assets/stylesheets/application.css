@@ -8,5 +8,6 @@
  *= require 960
  *= require site
  *= require nivo-slider
+ *= require bootstrap
  *= require default
 */
