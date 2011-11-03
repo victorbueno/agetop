@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111012172118) do
+ActiveRecord::Schema.define(:version => 20111102223906) do
 
   create_table "blocks", :force => true do |t|
     t.string   "name"
@@ -96,7 +96,6 @@ ActiveRecord::Schema.define(:version => 20111012172118) do
   end
 
   create_table "spots", :force => true do |t|
-    t.integer  "equipment_id"
     t.string   "pdf_file_name"
     t.string   "pdf_content_type"
     t.integer  "pdf_file_size"

@@ -1,0 +1,15 @@
+<div class="grid_12">
+<h1>Notícias - AGETOP</h1>
+
+<p>
+	<table class="posts">
+		<% @posts.each do |post| %>
+			<tr>
+				<td><%= data_formatada(post.created_at) %></td>
+				<td><%= link_to post.title, post %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= paginate @posts %>
+</p>
+</div>

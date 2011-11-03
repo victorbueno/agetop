@@ -1,0 +1,21 @@
+<div class="grid_12">
+	<div class="inner">
+		<h1>Pontos de operacionalização</h1>
+		
+		<table class="listas">
+			<tr>
+				<th>Atualizado em</th>
+				<th class="center">Visualizar PDF</th>
+			</tr>
+			
+			<% @spots.each do |spot| %>
+			<tr>
+				<td><%= data_formatada(spot.updated_at) unless spot.nil? %></td>
+				<td class="center"><%= link_to image_tag('pdf.png'), spot.pdf.url, :target => "_blank" unless spot.nil? %></td>
+			</tr>
+			<% end %>
+		</table>
+		
+		<%= paginate @spots %>
+	</div>
+</div>

@@ -14,12 +14,21 @@ html, body {
 	color: #666666;
 }
 
+a {
+	color: #666666;
+}
+
+a:hover {
+	color: #106eb3;
+}
+
 .inner {
 	padding: 10px;
 }
 
 #content {
 	background: #FFFFFF url('/assets/fundo_conteudo.png') repeat-x;
+	min-height: 500px;
 }
 
 #content_container {
@@ -54,12 +63,12 @@ html, body {
 
 #menu_container {
 	background: url('/assets/fundo_menu.png') repeat-x;
-	height: 46px;
+	height: 40px;
 	border-top: 1px solid #FFF;
 	
 	#menu {
-		line-height: 46px;
-		font-size: 15px;
+		line-height: px;
+		font-size: 13px;
 		
 		.nav {
 			list-style: none;
@@ -116,4 +125,16 @@ html, body {
 	}
 }
 
+.rodape {
+	text-align: center;
+}
+
+.posts {
+	width: 100%;
+}
+
+.posts td {
+	padding: 5px;
+	border-bottom: 1px dotted silver;
+}
 

@@ -1,0 +1,10 @@
+<div class="grid_12">
+	<div class="inner">
+		<h1><%= @post.title %></h1>
+		<i>em <%= data_formatada(@post.created_at) %></i>
+		<p>
+			<%= raw @post.content %>
+		</p>
+		<%= link_to 'Voltar', :back %>
+	</div>
+</div>

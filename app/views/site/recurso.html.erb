@@ -1,0 +1,223 @@
+<div class="grid_12">
+	<div class="inner">
+		<h1>Formulário para Recurso de Infração</h1>
+
+		<% flash.each do |key, msg| %>
+			<div class="alert-message <%= key %>"><p><%= msg %></p></div>
+		<% end %>
+
+		<%= form_for @recurso, :url => {:controller => "site", :action => "print_recurso"} do |f| %>
+		<fieldset>
+			<legend>Dados do infrator</legend>
+
+			<div class="clearfix">
+				<%= f.label :nome %>
+				<div class="input">
+					<%= f.text_field :nome, :class => 'xlarge' %>
+				</div>
+			</div>
+
+			<div class="clearfix">
+				<label>O infrator é</label>
+				<div class="input">
+					<ul class="inputs-list">
+						<li><label><%= f.radio_button :proprietario_condutor, "Proprietário" %> <span>Proprietário do veículo</span></label></li>
+						<li><label><%= f.radio_button :proprietario_condutor, "Condutor" %> <span>Condutor do veículo</span></label></li>
+					</ul>		
+				</div>
+			</div>
+
+			<div class="clearfix">
+				<%= f.label :residente %>
+				<div class="input">
+					<%= f.text_field :residente, :class => 'xlarge' %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :bairro %>
+				<div class="input">
+					<%= f.text_field :bairro %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :cidade %>
+				<div class="input">
+					<%= f.text_field :cidade %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :uf %>
+				<div class="input">
+					<%= f.text_field :uf %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :cep %>
+				<div class="input">
+					<%= f.text_field :cep, :placeholder => '74.000-000', :class => 'cep' %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :fone %>
+				<div class="input">
+					<%= f.text_field :fone, :placeholder => '62 0000-0000' %>
+				</div>
+			</div>	<div class="clearfix">
+				<%= f.label :identidade %>
+				<div class="input">
+					<%= f.text_field :identidade %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :cpf %>
+				<div class="input">
+					<%= f.text_field :cpf %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :cnh %>
+				<div class="input">
+					<%= f.text_field :cnh %>
+				</div>
+			</div>	<div class="clearfix">
+				<%= f.label :uf_cnh %>
+				<div class="input">
+					<%= f.text_field :uf_cnh %>
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Dados do veículo</legend>
+
+			<div class="clearfix">
+				<%= f.label :placa %>
+				<div class="input">
+					<%= f.text_field :placa, :placeholder => 'ABC-1234' %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :cor %>
+				<div class="input">
+					<%= f.text_field :cor %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :chassi_renavam %>
+				<div class="input">
+					<%= f.text_field :chassi_renavam %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :marca_modelo %>
+				<div class="input">
+					<%= f.text_field :marca_modelo %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :ano %>
+				<div class="input">
+					<%= f.text_field :ano, :placeholder => '2011/2012' %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :empresa %>
+				<div class="input">
+					<%= f.text_field :empresa %>
+				</div>
+			</div>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Dados da infração</legend>
+
+			<div class="clearfix">
+				<%= f.label :numero_auto %>
+				<div class="input">
+					<%= f.text_field :numero_auto %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :data_auto %>
+				<div class="input">
+					<%= f.text_field :data_auto, :placeholder => '23/10/2011' %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :horario_auto %>
+				<div class="input">
+					<%= f.text_field :horario_auto, :placeholder => '14:25' %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :artigo_auto %>
+				<div class="input">
+					<%= f.text_field :artigo_auto %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :rodovia_auto %>
+				<div class="input">
+					<%= f.text_field :rodovia_auto %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :km_auto %>
+				<div class="input">
+					<%= f.text_field :km_auto %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :municipio_auto %>
+				<div class="input">
+					<%= f.text_field :municipio_auto %>
+				</div>
+			</div>
+
+		</fieldset>
+		
+		<fieldset>
+			<legend>Razões para o recurso</legend>
+			<div class="input">
+				<ul class="inputs-list">
+					<li><label><%= f.radio_button :cancelamento_restituicao, "cancelamento" %> <span>Cancelamento</span></label></li>
+					<li><label><%= f.radio_button :cancelamento_restituicao, "restituição" %> <span>Restituição</span></label></li>
+					<li><label><%= f.radio_button :cancelamento_restituicao, "cancelamento e restituição" %> <span>Cancelamento e Restituição</span></label></li>
+				</ul>		
+			</div>
+			
+			<div class="clearfix">
+				<%= f.label :banco %>
+				<div class="input">
+					<%= f.text_field :banco %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :agencia %>
+				<div class="input">
+					<%= f.text_field :agencia %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :conta_corrente %>
+				<div class="input">
+					<%= f.text_field :conta_corrente %>
+				</div>
+			</div>
+			<div class="clearfix">
+				<%= f.label :razoes %>
+				<div class="input">
+					<%= f.text_area :razoes, :cols => 100, :rows => 6, :class => 'xxlarge' %>
+				</div>
+			</div>
+
+		</fieldset>
+		
+		<div class="actions">
+			<%= f.submit 'Gerar documento', :class => 'btn primary' %>
+		</div>
+		<% end %>
+	</div>
+</div>

@@ -13,10 +13,10 @@
 	<div class="topo_amarelo"></div>
 	<div id="header" class="container_12">
 		<div class="grid_6">
-			<%= image_tag("logo_agetop.png") -%>
+			<%= link_to image_tag("logo_agetop.png", :height => 100), root_path -%>
 		</div>
 		<div class="grid_6 topo_direita">
-			<%= image_tag("logo_estado.png") -%>
+			<%= image_tag("logo_estado.png", :height => 100) -%>
 		</div>
 	</div>
 	<div class="clear"></div>
@@ -25,14 +25,27 @@
 <div id="menu_container">
 	<div id="menu" class="container_12">
 		<div class="grid_12">
+			<ul class="nav">
+				<% cont = 0 %>
+				<% @menu.each do |link| -%>
+					<% cont = cont + 1 %>
+					<li class="<%= 'last' if cont == @menu.size %> <%= 'first' if cont == 1 %>"><%= get_link(link) %></li>
+				<% end -%>
+			</ul>
 		</div>
 	</div>
 </div>
 
 <div id="content_container">
 	<div id="content" class="container_12">
-		<div class="grid_12">
-			<%= yield %>
+		
+		<%= yield %>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="rodape">
+		<div class="inner">
+			Copyright <%= Time.now.year %> - AGETOP
 		</div>
 	</div>
 </div>

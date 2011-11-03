@@ -13,5 +13,19 @@
         </div>
     </div>
 </div>
-<br/><br/><br/>
+<br/>
+
+<p>
+	<h1>Últimas notícias</h1>
+	<table class="posts">
+		<% @posts.each do |post| %>
+			<tr>
+				<td><%= data_formatada(post.created_at) %></td>
+				<td><%= link_to post.title, post %></td>
+			</tr>
+		<% end %>
+	</table>
+	<%= link_to 'Mais notícias', posts_path %>
+</p>
+
 </div>

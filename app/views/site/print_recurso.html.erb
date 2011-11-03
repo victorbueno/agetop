@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<%= wicked_pdf_stylesheet_link_tag "pdf.css" -%>
+
+	<title>print_defesa_previa</title>
+	
+</head>
+
+<body>
+	<%#= wicked_pdf_image_tag image_path("logo_agetop.png") %>
+	
+	<div class="inner">
+	
+	<table class="table">
+		<tr>
+			<td><%= wicked_pdf_image_tag(image_path("logo_agetop.png"), :width => 150) %></td>
+			<td class="center">
+				<%= wicked_pdf_image_tag(image_path("logo_estado.png"), :width => 75) %><br/>
+				SECRETARIA DE INFRA-ESTRUTURA<br/>
+				AGÊNCIA GOIANA DE TRANSPORTES E OBRAS - AGETOP<br/>
+				JUNTA ADMINISTRATIVA DE RECURSOS DE INFRAÇÕES - JARI<br/>
+				Rua 17 nº 188 Casa-04 Setor Aeroviário - Fone: (62) 3201-4772/3201-4773 - CEP: 74435-250 - Goiânia - Goiás<br/>
+			</td>
+		</tr>
+	</table>
+	
+	<p class="center">
+		<strong>RECURSO DE INFRAÇÃO</strong>
+	</p>
+	
+	<p class="justify">
+		Ilmo. Sr.<br/>
+		Presidente da JARI - AGETOP<br/>
+		Junta Administrativa de Recursos de Infrações</br>
+		NESTA<br/><br/>
+		Eu: <u><%= @recurso.nome %></u>. <u><%= @recurso.proprietario_condutor %></u> do veículo de PLACA: <u><%= @recurso.placa %></u>, COR: <u><%= @recurso.cor %></u>, 
+		MARCA/MODELO: <u><%= @recurso.marca_modelo %></u>, ANO: <u><%= @recurso.ano %></u>, CHASSI/RENAVAM: <u><%= @recurso.chassi_renavam %></u>.
+	</p>
+	
+	<p class="justify">
+		<strong>DADOS DA INFRAÇÃO:</strong><br/><br/>
+		Auto de infração nº: <u><%= @recurso.numero_auto %></u>, data: <u><%= @recurso.data_auto %></u>, artigo: <u><%= @recurso.artigo_auto %></u>,
+		rodovia: <u><%= @recurso.rodovia_auto %></u>, KM: <u><%= @recurso.km_auto %></u>, horário: <u><%= @recurso.horario_auto %></u>, município: <u><%= @recurso.municipio_auto %></u>,
+		residente: <u><%= @recurso.residente %></u>, bairro: <u><%= @recurso.bairro %></u>, cidade: <u><%= @recurso.cidade %></u>, CEP: <u><%= @recurso.cep %></u>, fone: <u><%= @recurso.fone %></u>,
+		C.I.: <u><%= @recurso.identidade %></u>, UF: <u><%= @recurso.uf %></u>, CNH: <u><%= @recurso.cnh %></u>, UF: <u><%= @recurso.uf_cnh %></u>, CPF: <u><%= @recurso.cpf %></u>, trabalhando na empresa: <u><%= @recurso.empresa %></u>.
+	</p>
+	<p>
+		Vem respeitosamente à presença de Vossa Senhoria, em prazo hábil, interpor <strong>RECURSO</strong> solicitando o reestudo
+		do Auto de Infração ou do Extrado de Multa em anexo, requerendo requerendo o seu 
+		<strong><%= @recurso.cancelamento_restituicao %></strong>, banco: <u><%= @recurso.banco %></u>, agência: <u><%= @recurso.agencia %></u>, conta-corrente: <u><%= @recurso.conta_corrente %></u>, 
+		para que seja feita a restituição do valor pago, caso este processo seja deferido, tendo em vista a inobservância da Legislação de Trânsito vigente,
+		ou pelas razões a seguir: 
+		<em class="mao"><%= @recurso.razoes %></em>
+	</p>
+	
+	<p class="center">
+		Nestes termos,<br/>
+		Pede e espera provimento.<br/>
+		Goiânia - GO, <%= data_formatada(Time.now) %>.<br/><br/>
+		<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</u><br/>
+		Assinatura do requerente
+	</p>
+	
+	<div class="border small">
+	<div class="inner">
+	<p>
+		<u>Anexar documentos (Fotocópias) de:</u>
+		<ul>
+			<li>C.I.(Carteira de Identidade) e CPF (Cadastro de Pessoa Física);</li>
+			<li>Pessoa Jurídica: Contrato social ou estatuto e CNPJ;</li>
+			<li>CRLV (Certificado de Registro e Licenciatura de Veículo);</li>
+			<li>Auto de Infração e/ou Notificação Detran;</li>
+			<li>CNH (Carteira Nacional de Habilitação);</li>
+			<li>Comprovante de endereço (água, luz, telefone ou fatura de cartão).</li>
+		</ul>
+			OBS.: A não apresentação de quaisquer documentos solicitados neste requerimento implicará no indeferimento sumário do presente Recurso.
+	</p>
+	</div>
+	</div>
+	
+	</div>
+	
+</body>
+</html>
