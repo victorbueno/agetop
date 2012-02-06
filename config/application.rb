@@ -46,4 +46,8 @@ module Agetop
     config.assets.version = '1.0'
   
   end
+
+  ENV['GEM_HOME'] = "/usr/share/ruby-rvm/gems/ruby-1.9.2-head"
+  ENV['GEM_PATH'] = "/usr/share/ruby-rvm/gems/ruby-1.9.2-head"
+
 end

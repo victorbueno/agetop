@@ -2,9 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'mysql2'
+gem 'execjs'
+gem 'therubyracer'
 
-
-gem 'devise'
+gem 'devise', '1.5.3'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'paperclip', '2.4.0'
 gem "ckeditor", "~> 3.6.0"
