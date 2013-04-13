@@ -1,4 +1,6 @@
 Agetop::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   get "posts/index"
 
   get "posts/show"
@@ -16,7 +18,7 @@ Agetop::Application.routes.draw do
   resources :spots
   
   devise_for :users
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
 
   root :to => "site#index"
 end
